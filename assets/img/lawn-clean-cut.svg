@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2b2b2b"/>
+      <stop offset="1" stop-color="#8a7440"/>
+    </linearGradient>
+    <clipPath id="lawn"><rect x="0" y="330" width="1200" height="470"/></clipPath>
+  </defs>
+  <rect width="1200" height="334" fill="url(#sky)"/>
+  <path d="M0 320 Q60 290 120 318 T240 316 T360 320 T480 314 T600 318 T720 316 T840 320 T960 314 T1080 318 T1200 316 L1200 336 L0 336 Z" fill="#14351a"/>
+  <g clip-path="url(#lawn)">
+    <rect x="0" y="330" width="1200" height="470" fill="#245c2a"/>
+    <polygon points="600,330 -600.0,800 -428.6,800" fill="#2f7d2c"/>
+    <polygon points="600,330 -428.6,800 -257.1,800" fill="#3d9a36"/>
+    <polygon points="600,330 -257.1,800 -85.7,800" fill="#2f7d2c"/>
+    <polygon points="600,330 -85.7,800 85.7,800" fill="#3d9a36"/>
+    <polygon points="600,330 85.7,800 257.1,800" fill="#2f7d2c"/>
+    <polygon points="600,330 257.1,800 428.6,800" fill="#3d9a36"/>
+    <polygon points="600,330 428.6,800 600.0,800" fill="#2f7d2c"/>
+    <polygon points="600,330 600.0,800 771.4,800" fill="#3d9a36"/>
+    <polygon points="600,330 771.4,800 942.9,800" fill="#2f7d2c"/>
+    <polygon points="600,330 942.9,800 1114.3,800" fill="#3d9a36"/>
+    <polygon points="600,330 1114.3,800 1285.7,800" fill="#2f7d2c"/>
+    <polygon points="600,330 1285.7,800 1457.1,800" fill="#3d9a36"/>
+    <polygon points="600,330 1457.1,800 1628.6,800" fill="#2f7d2c"/>
+    <polygon points="600,330 1628.6,800 1800.0,800" fill="#3d9a36"/>
+    <!-- crisp mulch bed edge along the left side -->
+    <polygon points="0,330 110,330 430,800 0,800" fill="#2e2010"/>
+    <line x1="110" y1="330" x2="430" y2="800" stroke="#c9a227" stroke-width="3" stroke-opacity="0.8"/>
+    <!-- straight, clean edge along the right side of the lawn -->
+    <line x1="1090" y1="330" x2="1200" y2="800" stroke="#f3eee0" stroke-width="2" stroke-opacity="0.5"/>
+  </g>
+</svg>
