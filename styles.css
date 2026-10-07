@@ -1,17 +1,23 @@
-/* The Wright Touch: barber (red / black) and lawn (lime / green) in one site */
+/* The Wright Touch: barber (flyer orange / black) and lawn (grass green / yellow) in one site.
+   Accents: New Orleans purple + gold, and a drop of Jamaican green / gold / black. */
 
 :root {
   --ink: #0b0b0b;
-  --ink-2: #161616;
-  --ink-3: #242424;
+  --ink-2: #1c1408;
+  --ink-3: #2a1f0d;
   --cream: #f5efe4;
   --muted: #a8a197;
-  --red: #b3121e;
-  --red-hi: #d81e2c;
+  --orange: #f7941d;
+  --orange-hi: #ffa53a;
+  --orange-deep: #b8600a;
+  --purple: #5b2a86;
+  --gold: #f2c230;
+  --jam-green: #009b3a;
+  --jam-gold: #fed100;
   --green: #0f2e1a;
   --green-2: #15401f;
-  --lime: #c8f03a;
-  --lime-hi: #d9ff4a;
+  --yellow: #ffd60a;
+  --grass: #3fa535;
   --radius: 14px;
   --gutter: 16px;
   --max: 1120px;
@@ -51,8 +57,9 @@ p { margin: 0 0 1em; }
   color: var(--muted);
   margin-bottom: 0.6rem;
 }
+.eyebrow::before { content: "\269C\00a0"; color: var(--gold); letter-spacing: 0; }
 .muted { color: var(--muted); }
-.accent { color: var(--red-hi); }
+.accent { color: var(--orange); }
 
 /* ---------- Nav ---------- */
 .nav {
@@ -73,7 +80,7 @@ p { margin: 0 0 1em; }
 .brand-sub { font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted); margin-top: 3px; }
 .nav-links { display: none; gap: 22px; }
 .nav-links a { text-decoration: none; font-size: 0.9rem; font-weight: 600; color: var(--cream); opacity: 0.85; }
-.nav-links a:hover { opacity: 1; color: var(--lime); }
+.nav-links a:hover { opacity: 1; color: var(--yellow); }
 
 /* ---------- Hero ---------- */
 .hero {
@@ -92,7 +99,7 @@ p { margin: 0 0 1em; }
   font-family: var(--display);
   font-size: clamp(1.6rem, 4.5vw, 2.6rem);
   letter-spacing: 0.04em;
-  color: var(--lime);
+  color: var(--yellow);
   margin: 0 0 18px;
 }
 
@@ -121,23 +128,23 @@ p { margin: 0 0 1em; }
 
 .panel--barber {
   background:
-    linear-gradient(160deg, rgba(179, 18, 30, 0.35), transparent 55%),
+    linear-gradient(160deg, rgba(247, 148, 29, 0.35), transparent 55%),
     repeating-linear-gradient(45deg, #111 0 14px, #161616 14px 28px);
-  border: 1px solid #3a0d12;
+  border: 1px solid #7a4308;
   color: var(--cream);
 }
 .panel--barber .panel-tag,
-.panel--barber .panel-cta { color: var(--red-hi); }
+.panel--barber .panel-cta { color: var(--orange); }
 
 .panel--lawn {
   background:
-    linear-gradient(160deg, rgba(200, 240, 58, 0.22), transparent 55%),
+    linear-gradient(160deg, rgba(255, 214, 10, 0.2), transparent 55%),
     linear-gradient(180deg, var(--green-2), var(--green));
-  border: 1px solid #1f5a2e;
+  border: 1px solid #2f7a3a;
   color: var(--cream);
 }
 .panel--lawn .panel-tag,
-.panel--lawn .panel-cta { color: var(--lime); }
+.panel--lawn .panel-cta { color: var(--yellow); }
 
 /* ---------- Sections ---------- */
 .section {
@@ -150,6 +157,14 @@ p { margin: 0 0 1em; }
 .section--lawn { background: var(--green); max-width: none; }
 .section--lawn > * { max-width: var(--max); margin-left: auto; margin-right: auto; }
 .section--about, .section--contact { max-width: var(--max); }
+.section--about {
+  max-width: none;
+  background:
+    radial-gradient(circle at 85% 15%, rgba(91, 42, 134, 0.45), transparent 55%),
+    radial-gradient(circle at 10% 90%, rgba(242, 194, 48, 0.12), transparent 50%),
+    var(--ink);
+}
+.section--about > * { max-width: var(--max); margin-left: auto; margin-right: auto; }
 
 .section-head { margin-bottom: 28px; }
 .section-head h2 { font-size: clamp(2.4rem, 7vw, 4rem); }
@@ -186,8 +201,8 @@ p { margin: 0 0 1em; }
   transition: filter 0.15s ease, transform 0.15s ease;
 }
 .btn:hover { filter: brightness(1.08); transform: translateY(-1px); }
-.btn--red { background: var(--red-hi); color: #fff; }
-.btn--lime { background: var(--lime); color: #0b1a0d; }
+.btn--red { background: var(--orange); color: #0b0b0b; }
+.btn--lime { background: var(--yellow); color: #0b1a0d; }
 
 /* ---------- Transformations ---------- */
 .work-grid {
@@ -197,7 +212,7 @@ p { margin: 0 0 1em; }
 }
 figure { margin: 0; }
 figcaption { font-size: 0.9rem; color: var(--muted); margin-top: 10px; }
-figcaption a { color: var(--lime); }
+figcaption a { color: var(--yellow); }
 
 .ba-wrap { grid-column: 1 / -1; }
 .ba {
@@ -228,7 +243,7 @@ figcaption a { color: var(--lime); }
   left: var(--pos);
   width: 3px;
   margin-left: -1.5px;
-  background: var(--lime);
+  background: var(--yellow);
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
   pointer-events: none;
 }
@@ -241,7 +256,7 @@ figcaption a { color: var(--lime); }
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: var(--lime);
+  background: var(--yellow);
   color: #0b0b0b;
   font-size: 18px;
   line-height: 40px;
@@ -261,7 +276,7 @@ figcaption a { color: var(--lime); }
   pointer-events: none;
 }
 .ba-label--before { left: 12px; }
-.ba-label--after { right: 12px; background: var(--red-hi); }
+.ba-label--after { right: 12px; background: var(--orange); color: #0b0b0b; }
 
 .ba-range {
   position: absolute;
@@ -282,12 +297,25 @@ figcaption a { color: var(--lime); }
 .work-single img { object-position: center; }
 
 /* ---------- About ---------- */
+.about-grid { display: grid; gap: 28px; align-items: start; }
+.flyer { margin: 0; }
+.flyer img {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+  border-radius: var(--radius);
+  border: 2px solid var(--gold);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.55);
+  transform: rotate(-1.5deg);
+}
+.flyer figcaption { text-align: center; max-width: 420px; margin: 12px auto 0; }
+.tagline { font-family: var(--display); font-size: 1.5rem; letter-spacing: 0.04em; color: var(--orange); margin-top: 1.2em; }
 .section--about .about {
   max-width: 44em;
   font-size: 1.1rem;
   color: #d9d2c5;
 }
-.sig { font-family: var(--display); font-size: 1.6rem; color: var(--lime); letter-spacing: 0.04em; }
+.sig { font-family: var(--display); font-size: 1.6rem; color: var(--yellow); letter-spacing: 0.04em; }
 
 /* ---------- Contact ---------- */
 .contact-grid {
@@ -306,11 +334,11 @@ figcaption a { color: var(--lime); }
   border: 1px solid #333;
   transition: border-color 0.15s ease, transform 0.15s ease;
 }
-.contact-btn:hover { border-color: var(--lime); transform: translateY(-2px); }
-.contact-btn--primary { background: var(--red); border-color: var(--red-hi); }
-.contact-btn--primary:hover { border-color: #fff; }
+.contact-btn:hover { border-color: var(--yellow); transform: translateY(-2px); }
+.contact-btn--primary { background: var(--orange); border-color: var(--orange-hi); color: #0b0b0b; }
+.contact-btn--primary:hover { border-color: #0b0b0b; }
 .contact-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); }
-.contact-btn--primary .contact-label { color: #ffd6d9; }
+.contact-btn--primary .contact-label { color: #3a2100; }
 .contact-value { font-family: var(--display); font-size: 1.9rem; letter-spacing: 0.03em; line-height: 1.1; }
 
 .steps {
@@ -338,7 +366,7 @@ figcaption a { color: var(--lime); }
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background: var(--lime);
+  background: var(--yellow);
   color: #0b0b0b;
   font-weight: 700;
   text-align: center;
@@ -357,6 +385,10 @@ figcaption a { color: var(--lime); }
   border-top: 1px solid #222;
 }
 .footer p { margin: 0; }
+.stripe {
+  height: 6px;
+  background: linear-gradient(90deg, var(--jam-green) 0 33.33%, var(--jam-gold) 33.33% 66.66%, #000 66.66% 100%);
+}
 
 /* ---------- Mobile action bar ---------- */
 .mobile-bar {
@@ -384,7 +416,7 @@ figcaption a { color: var(--lime); }
   background: var(--ink-3);
   color: var(--cream);
 }
-.mobile-bar .mobile-bar-primary { background: var(--red-hi); color: #fff; }
+.mobile-bar .mobile-bar-primary { background: var(--orange); color: #0b0b0b; }
 
 /* ---------- Larger screens ---------- */
 @media (min-width: 640px) {
@@ -409,6 +441,7 @@ figcaption a { color: var(--lime); }
   .section--dark > * { padding-left: 0; padding-right: 0; }
   .section--lawn > * { padding-left: 0; padding-right: 0; }
   .work-grid { grid-template-columns: 1fr 1fr; }
+  .about-grid { grid-template-columns: 1.2fr 1fr; gap: 48px; }
   .ba { aspect-ratio: 16 / 10; }
   .contact-grid { grid-template-columns: repeat(4, 1fr); }
 }
