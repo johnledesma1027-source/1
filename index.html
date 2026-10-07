@@ -60,30 +60,68 @@
               <!-- pivot screw -->
               <circle cx="65" cy="65" r="5" fill="#2b2b2b" stroke="#c9a227" stroke-width="2"/>
             </svg>
-            <div class="clippers" role="img" aria-label="Clippers with a gold fleur-de-lis">
+            <div class="clippers" role="img" aria-label="Clippers">
               <img src="assets/img/clipper.png" alt="">
-              <svg class="clipper-fleur" viewBox="0 0 644 719" aria-hidden="true" focusable="false">
-                <defs>
-                  <linearGradient id="fl-gold" x1="0" y1="0" x2="1" y2="1">
-                    <stop offset="0" stop-color="#fbe49a"/>
-                    <stop offset="0.4" stop-color="#d9b245"/>
-                    <stop offset="0.65" stop-color="#c9a227"/>
-                    <stop offset="1" stop-color="#6e5410"/>
-                  </linearGradient>
-                </defs>
-                <g transform="translate(298 356) rotate(44) scale(1.02) translate(-50 -58)" fill="url(#fl-gold)" stroke="#3d2c06" stroke-width="1" stroke-opacity="0.7">
-                  <path d="M50 0 C54 12 60 24 60 42 C60 52 55 58 50 62 C45 58 40 52 40 42 C40 24 46 12 50 0 Z"/>
-                  <path d="M44 46 C34 42 22 44 8 34 C14 46 16 58 26 66 C32 70 40 70 46 64 Z"/>
-                  <path d="M56 46 C66 42 78 44 92 34 C86 46 84 58 74 66 C68 70 60 70 54 64 Z"/>
-                  <path d="M26 64 C36 72 64 72 74 64 C78 70 74 76 66 80 C56 84 44 84 34 80 C26 76 22 70 26 64 Z"/>
-                  <path d="M43 80 L57 80 L55 104 L50 116 L45 104 Z"/>
-                  <g fill="none" stroke="#5a4208" stroke-opacity="0.6" stroke-width="1.8" stroke-linecap="round">
+            </div>
+              <div class="fleur-wrap" aria-hidden="true">
+                <svg class="fleur" viewBox="0 0 100 120" focusable="false">
+                  <defs>
+                    <linearGradient id="fleur-gold" x1="0" y1="0" x2="0.5" y2="1">
+                      <stop offset="0" stop-color="#fff3b0"/>
+                      <stop offset="0.35" stop-color="#e8c45c"/>
+                      <stop offset="0.7" stop-color="#b8861c"/>
+                      <stop offset="1" stop-color="#6e4f0c"/>
+                    </linearGradient>
+                    <linearGradient id="fleur-shine" x1="0" y1="0" x2="1" y2="0">
+                      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+                      <stop offset="0.45" stop-color="#fff" stop-opacity="0"/>
+                      <stop offset="0.5" stop-color="#fff" stop-opacity="0.95"/>
+                      <stop offset="0.55" stop-color="#fff" stop-opacity="0"/>
+                      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+                    </linearGradient>
+                    <path id="fp-c" d="M50 0 C54 12 60 24 60 42 C60 52 55 58 50 62 C45 58 40 52 40 42 C40 24 46 12 50 0 Z"/>
+                    <path id="fp-l" d="M44 46 C34 42 22 44 8 34 C14 46 16 58 26 66 C32 70 40 70 46 64 Z"/>
+                    <path id="fp-r" d="M56 46 C66 42 78 44 92 34 C86 46 84 58 74 66 C68 70 60 70 54 64 Z"/>
+                    <path id="fp-b" d="M26 64 C36 72 64 72 74 64 C78 70 74 76 66 80 C56 84 44 84 34 80 C26 76 22 70 26 64 Z"/>
+                    <path id="fp-s" d="M43 80 L57 80 L55 104 L50 116 L45 104 Z"/>
+                    <clipPath id="fleur-clip">
+                      <use href="#fp-c"/><use href="#fp-l"/><use href="#fp-r"/><use href="#fp-b"/><use href="#fp-s"/>
+                    </clipPath>
+                    <path id="sparkle" d="M0 -7 L1.8 -1.8 L7 0 L1.8 1.8 L0 7 L-1.8 1.8 L-7 0 L-1.8 -1.8 Z"/>
+                  </defs>
+
+                  <!-- petals and stem in gold, with a dark outline -->
+                  <g fill="url(#fleur-gold)" stroke="#3d2c06" stroke-width="0.9" stroke-linejoin="round">
+                    <use href="#fp-c"/><use href="#fp-l"/><use href="#fp-r"/><use href="#fp-b"/><use href="#fp-s"/>
+                  </g>
+
+                  <!-- inner shading for depth -->
+                  <g fill="#7a5410" fill-opacity="0.45">
+                    <path d="M50 6 C52.5 16 55 26 54.5 40 C54 48 52 52 50 55 C48 52 46 48 45.5 40 C45 26 47.5 16 50 6 Z"/>
+                    <path d="M42 49 C33 45 24 46 14 37 C19 47 20 56 27 62 C31 65 37 65 42 61 Z"/>
+                    <path d="M58 49 C67 45 76 46 86 37 C81 47 80 56 73 62 C69 65 63 65 58 61 Z"/>
+                  </g>
+
+                  <!-- ribs and band detail -->
+                  <g fill="none" stroke="#4a3408" stroke-opacity="0.6" stroke-width="1.4" stroke-linecap="round">
                     <path d="M50 6 L50 56"/>
                     <path d="M30 72 Q50 80 70 72"/>
                   </g>
-                </g>
-              </svg>
-            </div>
+                  <g fill="none" stroke="#fffbe0" stroke-opacity="0.55" stroke-width="1.1" stroke-linecap="round">
+                    <path d="M46 10 C44 22 45 32 47 40"/>
+                    <path d="M18 38 C24 41 30 45 36 51"/>
+                    <path d="M82 38 C76 41 70 45 64 51"/>
+                  </g>
+
+                  <!-- moving glint, clipped to the fleur -->
+                  <g clip-path="url(#fleur-clip)">
+                    <rect class="fleur-glint" x="-40" y="-10" width="36" height="150" fill="url(#fleur-shine)"/>
+                  </g>
+                </svg>
+                <span class="sparkle sparkle--1"><svg viewBox="-8 -8 16 16"><use href="#sparkle"/></svg></span>
+                <span class="sparkle sparkle--2"><svg viewBox="-8 -8 16 16"><use href="#sparkle"/></svg></span>
+                <span class="sparkle sparkle--3"><svg viewBox="-8 -8 16 16"><use href="#sparkle"/></svg></span>
+              </div>
             <svg class="pole" viewBox="0 0 100 300" aria-hidden="true" focusable="false">
               <defs>
                 <linearGradient id="pole-chrome" x1="0" y1="0" x2="1" y2="0">
