@@ -451,14 +451,15 @@ figcaption a { color: var(--yellow); }
   *, *::before, *::after { transition: none !important; }
 }
 
-/* ---------- Video ---------- */
+/* ---------- Inside the work (animated GIF) ---------- */
 .section--video { max-width: var(--max); margin: 0 auto; }
 .video-wrap { margin: 0; }
-.video-wrap video {
+.video-wrap img {
   display: block;
   width: 100%;
   height: auto;
   max-height: 80vh;
+  object-fit: contain;
   border-radius: var(--radius);
   background: #000;
   border: 1px solid #2a2a2a;
