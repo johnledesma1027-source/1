@@ -520,18 +520,18 @@ figcaption a { color: var(--yellow); }
   .panel--barber p { padding-right: 56px; }
 }
 
-/* Clippers: top-left of the barber panel, tilted like they're just set down */
+/* Clippers: sit to the left of the shears, tilted like they're just set down */
 .clippers {
   position: absolute;
   top: 26px;
-  left: 22px;
+  right: 176px;
   width: 170px;
   height: auto;
   transform: rotate(-14deg);
   filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.6));
 }
 @media (max-width: 859px) {
-  .clippers { width: 120px; top: 18px; left: 14px; }
+  .clippers { width: 120px; top: 18px; right: 112px; }
 }
 
 /* Scissors sit higher and smaller on phones so they clear the heading */
