@@ -520,18 +520,26 @@ figcaption a { color: var(--yellow); }
   .panel--barber p { padding-right: 56px; }
 }
 
-/* Clippers: sit to the left of the shears, tilted like they're just set down */
+/* Clippers: reference illustration with a gold fleur-de-lis, left of the shears */
 .clippers {
   position: absolute;
-  top: 26px;
-  right: 176px;
-  width: 170px;
-  height: auto;
-  transform: rotate(-14deg);
+  top: 24px;
+  right: 170px;
+  width: 150px;
   filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.6));
 }
+.clippers img,
+.clipper-fleur {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.clipper-fleur {
+  position: absolute;
+  inset: 0;
+}
 @media (max-width: 859px) {
-  .clippers { width: 120px; top: 18px; right: 112px; }
+  .clippers { width: 78px; top: 6px; right: 100px; }
 }
 
 /* Scissors sit higher and smaller on phones so they clear the heading */

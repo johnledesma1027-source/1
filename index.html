@@ -60,88 +60,30 @@
               <!-- pivot screw -->
               <circle cx="65" cy="65" r="5" fill="#2b2b2b" stroke="#c9a227" stroke-width="2"/>
             </svg>
-            <svg class="clippers" viewBox="0 0 300 150" aria-hidden="true" focusable="false">
-              <defs>
-                <linearGradient id="cl-body" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0" stop-color="#4a4a4a"/>
-                  <stop offset="0.12" stop-color="#1e1e1e"/>
-                  <stop offset="0.5" stop-color="#0c0c0c"/>
-                  <stop offset="0.88" stop-color="#1a1a1a"/>
-                  <stop offset="1" stop-color="#3a3a3a"/>
-                </linearGradient>
-                <linearGradient id="cl-metal" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0" stop-color="#fbfcfd"/>
-                  <stop offset="0.35" stop-color="#b9c0c7"/>
-                  <stop offset="0.6" stop-color="#7d858e"/>
-                  <stop offset="1" stop-color="#4b525a"/>
-                </linearGradient>
-                <linearGradient id="cl-gold" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0" stop-color="#fbe49a"/>
-                  <stop offset="0.35" stop-color="#d9b245"/>
-                  <stop offset="0.6" stop-color="#c9a227"/>
-                  <stop offset="1" stop-color="#6e5410"/>
-                </linearGradient>
-                <radialGradient id="cl-medal" cx="0.4" cy="0.35" r="0.8">
-                  <stop offset="0" stop-color="#2a2a2a"/>
-                  <stop offset="1" stop-color="#000000"/>
-                </radialGradient>
-                <pattern id="cl-knurl" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-                  <line x1="0" y1="0" x2="0" y2="5" stroke="#ffffff" stroke-opacity="0.10" stroke-width="1.3"/>
-                </pattern>
-                <clipPath id="cl-bodyclip"><rect x="108" y="40" width="156" height="72" rx="32"/></clipPath>
-              </defs>
-
-              <!-- cord and strain relief -->
-              <path d="M270 84 C290 78 300 102 296 138" fill="none" stroke="#0d0d0d" stroke-width="5.5" stroke-linecap="round"/>
-              <rect x="262" y="77" width="13" height="16" rx="4" fill="#1c1c1c" stroke="#3b3b3b" stroke-width="0.8"/>
-
-              <!-- body with knurled grip -->
-              <rect x="108" y="40" width="156" height="72" rx="32" fill="url(#cl-body)"/>
-              <rect x="108" y="40" width="156" height="72" rx="32" fill="url(#cl-knurl)" clip-path="url(#cl-bodyclip)"/>
-              <rect x="108" y="40" width="156" height="72" rx="32" fill="none" stroke="url(#cl-gold)" stroke-width="1.6"/>
-              <!-- gold pinstripes -->
-              <path d="M124 46 L250 46" stroke="url(#cl-gold)" stroke-width="1" stroke-opacity="0.8"/>
-              <path d="M124 106 L250 106" stroke="url(#cl-gold)" stroke-width="1" stroke-opacity="0.8"/>
-              <!-- rear vents -->
-              <g fill="#000" fill-opacity="0.85">
-                <rect x="226" y="58" width="22" height="3" rx="1.5"/>
-                <rect x="226" y="65" width="22" height="3" rx="1.5"/>
-                <rect x="226" y="72" width="22" height="3" rx="1.5"/>
-                <rect x="226" y="79" width="22" height="3" rx="1.5"/>
-              </g>
-              <!-- gold rear bands -->
-              <rect x="252" y="40" width="5" height="72" fill="url(#cl-gold)"/>
-              <rect x="262" y="40" width="2" height="72" fill="url(#cl-gold)"/>
-              <!-- power slider and lever -->
-              <rect x="150" y="32" width="34" height="10" rx="4" fill="#262626" stroke="url(#cl-gold)" stroke-width="1"/>
-              <rect x="196" y="49" width="16" height="5" rx="2.5" fill="#000" stroke="url(#cl-gold)" stroke-width="0.7"/>
-
-              <!-- medallion with fleur-de-lis -->
-              <circle cx="186" cy="76" r="22" fill="url(#cl-medal)" stroke="url(#cl-gold)" stroke-width="2.2"/>
-              <circle cx="186" cy="76" r="18" fill="none" stroke="url(#cl-gold)" stroke-width="0.8" stroke-opacity="0.7"/>
-              <g transform="translate(172.5 60.3) scale(0.27)">
-                <path d="M50 0 C54 12 60 24 60 42 C60 52 55 58 50 62 C45 58 40 52 40 42 C40 24 46 12 50 0 Z" fill="url(#cl-gold)"/>
-                <path d="M44 46 C34 42 22 44 8 34 C14 46 16 58 26 66 C32 70 40 70 46 64 Z" fill="url(#cl-gold)"/>
-                <path d="M56 46 C66 42 78 44 92 34 C86 46 84 58 74 66 C68 70 60 70 54 64 Z" fill="url(#cl-gold)"/>
-                <path d="M26 64 C36 72 64 72 74 64 C78 70 74 76 66 80 C56 84 44 84 34 80 C26 76 22 70 26 64 Z" fill="url(#cl-gold)"/>
-                <path d="M43 80 L57 80 L55 104 L50 116 L45 104 Z" fill="url(#cl-gold)"/>
-                <g fill="none" stroke="#5a4208" stroke-opacity="0.6" stroke-width="1.8" stroke-linecap="round">
-                  <path d="M50 6 L50 56"/>
-                  <path d="M30 72 Q50 80 70 72"/>
+            <div class="clippers" role="img" aria-label="Clippers with a gold fleur-de-lis">
+              <img src="assets/img/clipper.png" alt="">
+              <svg class="clipper-fleur" viewBox="0 0 644 719" aria-hidden="true" focusable="false">
+                <defs>
+                  <linearGradient id="fl-gold" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#fbe49a"/>
+                    <stop offset="0.4" stop-color="#d9b245"/>
+                    <stop offset="0.65" stop-color="#c9a227"/>
+                    <stop offset="1" stop-color="#6e5410"/>
+                  </linearGradient>
+                </defs>
+                <g transform="translate(298 356) rotate(44) scale(1.02) translate(-50 -58)" fill="url(#fl-gold)" stroke="#3d2c06" stroke-width="1" stroke-opacity="0.7">
+                  <path d="M50 0 C54 12 60 24 60 42 C60 52 55 58 50 62 C45 58 40 52 40 42 C40 24 46 12 50 0 Z"/>
+                  <path d="M44 46 C34 42 22 44 8 34 C14 46 16 58 26 66 C32 70 40 70 46 64 Z"/>
+                  <path d="M56 46 C66 42 78 44 92 34 C86 46 84 58 74 66 C68 70 60 70 54 64 Z"/>
+                  <path d="M26 64 C36 72 64 72 74 64 C78 70 74 76 66 80 C56 84 44 84 34 80 C26 76 22 70 26 64 Z"/>
+                  <path d="M43 80 L57 80 L55 104 L50 116 L45 104 Z"/>
+                  <g fill="none" stroke="#5a4208" stroke-opacity="0.6" stroke-width="1.8" stroke-linecap="round">
+                    <path d="M50 6 L50 56"/>
+                    <path d="M30 72 Q50 80 70 72"/>
+                  </g>
                 </g>
-              </g>
-
-              <!-- blade housing with screws -->
-              <polygon points="40,56 116,49 116,101 40,95" fill="url(#cl-metal)" stroke="#3f464e" stroke-width="1"/>
-              <polyline points="42,58 114,51" fill="none" stroke="#ffffff" stroke-opacity="0.6" stroke-width="1.2"/>
-              <circle cx="58" cy="66" r="2.6" fill="#5b626b" stroke="#2b3036" stroke-width="0.8"/>
-              <circle cx="98" cy="60" r="2.6" fill="#5b626b" stroke="#2b3036" stroke-width="0.8"/>
-              <!-- cutting blade with individual teeth -->
-              <path d="M40 95.0 L41.7 102.0 L42.9 95.0 L44.3 102.2 L45.5 95.2 L46.9 102.5 L48.1 95.5 L49.5 102.7 L50.7 95.7 L52.1 102.9 L53.3 95.9 L54.7 103.1 L55.9 96.1 L57.3 103.3 L58.5 96.3 L59.9 103.5 L61.1 96.5 L62.5 103.7 L63.7 96.7 L65.1 103.9 L66.3 96.9 L67.7 104.1 L68.9 97.1 L70.3 104.3 L71.5 97.3 L72.9 104.5 L74.1 97.5 L75.5 104.7 L76.7 97.7 L78.1 104.9 L79.3 97.9 L80.7 105.1 L81.9 98.1 L83.3 105.3 L84.5 98.3 L85.9 105.5 L87.1 98.5 L88.5 105.7 L89.7 98.7 L91.1 105.9 L92.3 98.9 L93.7 106.1 L94.9 99.1 L96.3 106.3 L97.5 99.3 L98.9 106.6 L100.1 99.6 L101.5 106.8 L102.7 99.8 L104.1 107.0 L105.3 100.0 L106.7 107.2 L107.9 100.2 L109.3 107.4 L110.5 100.4 L111.9 107.6 L113.1 100.6 L114.5 107.8 L115.7 100.8 L116 101.0 Z" fill="url(#cl-metal)" stroke="#3f464e" stroke-width="0.7"/>
-
-              <!-- glossy highlight on body -->
-              <path d="M130 46 Q190 36 250 46" fill="none" stroke="#ffffff" stroke-opacity="0.2" stroke-width="4" stroke-linecap="round"/>
-            </svg>
+              </svg>
+            </div>
             <svg class="pole" viewBox="0 0 100 300" aria-hidden="true" focusable="false">
               <defs>
                 <linearGradient id="pole-chrome" x1="0" y1="0" x2="1" y2="0">
