@@ -482,15 +482,11 @@ figcaption a { color: var(--yellow); }
 
 .pole {
   position: absolute;
-  right: 22px;
-  bottom: 26px;
-  width: 26px;
-  height: 120px;
-  border-radius: 13px;
-  border: 2px solid #d9d2c5;
-  background: repeating-linear-gradient(-45deg, #e53935 0 9px, #f5f5f5 9px 18px, #1e4fd6 18px 27px);
-  background-size: 100% 54px;
-  box-shadow: 0 0 0 2px #000000;
+  right: 26px;
+  bottom: 22px;
+  width: 58px;
+  height: 174px;
+  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.6));
 }
 
 /* Lawn: still illustrated lawn with sharp mowing lines and a straight walkway */
@@ -513,3 +509,13 @@ figcaption a { color: var(--yellow); }
 
 /* Zoomed-out before / after: show the whole photo, not a crop */
 .ba--zoom-out .ba-img { object-fit: contain; }
+
+/* Smaller pole on phones so it doesn't crowd the panel text */
+@media (max-width: 859px) {
+  .pole { width: 40px; height: 120px; right: 16px; bottom: 16px; }
+}
+
+/* Keep phone-width panel text clear of the barber pole */
+@media (max-width: 859px) {
+  .panel--barber p { padding-right: 56px; }
+}

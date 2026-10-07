@@ -52,7 +52,68 @@
               </g>
               <circle cx="60" cy="60" r="6" fill="#c9a227"/>
             </svg>
-            <span class="pole"></span>
+            <svg class="pole" viewBox="0 0 100 300" aria-hidden="true" focusable="false">
+              <defs>
+                <linearGradient id="pole-chrome" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0" stop-color="#5b6168"/>
+                  <stop offset="0.3" stop-color="#f5f7fa"/>
+                  <stop offset="0.5" stop-color="#9aa1a9"/>
+                  <stop offset="0.75" stop-color="#eef1f4"/>
+                  <stop offset="1" stop-color="#4a4f57"/>
+                </linearGradient>
+                <radialGradient id="pole-dome" cx="0.4" cy="0.35" r="0.7">
+                  <stop offset="0" stop-color="#ffffff"/>
+                  <stop offset="0.5" stop-color="#b9c0c8"/>
+                  <stop offset="1" stop-color="#3b4046"/>
+                </radialGradient>
+                <clipPath id="pole-body"><rect x="14" y="50" width="72" height="206"/></clipPath>
+                <linearGradient id="pole-shade" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0" stop-color="#000" stop-opacity="0.65"/>
+                  <stop offset="0.22" stop-color="#fff" stop-opacity="0.18"/>
+                  <stop offset="0.45" stop-color="#000" stop-opacity="0"/>
+                  <stop offset="0.7" stop-color="#fff" stop-opacity="0.12"/>
+                  <stop offset="1" stop-color="#000" stop-opacity="0.7"/>
+                </linearGradient>
+              </defs>
+              <!-- chrome dome -->
+              <path d="M14 42 Q14 4 50 4 Q86 4 86 42 Z" fill="url(#pole-dome)"/>
+              <!-- striped body -->
+              <g clip-path="url(#pole-body)">
+                <polygon points="-160,256 -144,256 -34,50 -50,50" fill="#d7261e"/>
+                <polygon points="-144,256 -128,256 -18,50 -34,50" fill="#f4f4f4"/>
+                <polygon points="-128,256 -112,256 -2,50 -18,50" fill="#1f4fd1"/>
+                <polygon points="-112,256 -96,256 14,50 -2,50" fill="#f4f4f4"/>
+                <polygon points="-96,256 -80,256 30,50 14,50" fill="#d7261e"/>
+                <polygon points="-80,256 -64,256 46,50 30,50" fill="#f4f4f4"/>
+                <polygon points="-64,256 -48,256 62,50 46,50" fill="#1f4fd1"/>
+                <polygon points="-48,256 -32,256 78,50 62,50" fill="#f4f4f4"/>
+                <polygon points="-32,256 -16,256 94,50 78,50" fill="#d7261e"/>
+                <polygon points="-16,256 0,256 110,50 94,50" fill="#f4f4f4"/>
+                <polygon points="0,256 16,256 126,50 110,50" fill="#1f4fd1"/>
+                <polygon points="16,256 32,256 142,50 126,50" fill="#f4f4f4"/>
+                <polygon points="32,256 48,256 158,50 142,50" fill="#d7261e"/>
+                <polygon points="48,256 64,256 174,50 158,50" fill="#f4f4f4"/>
+                <polygon points="64,256 80,256 190,50 174,50" fill="#1f4fd1"/>
+                <polygon points="80,256 96,256 206,50 190,50" fill="#f4f4f4"/>
+                <polygon points="96,256 112,256 222,50 206,50" fill="#d7261e"/>
+                <polygon points="112,256 128,256 238,50 222,50" fill="#f4f4f4"/>
+                <polygon points="128,256 144,256 254,50 238,50" fill="#1f4fd1"/>
+                <polygon points="144,256 160,256 270,50 254,50" fill="#f4f4f4"/>
+                <polygon points="160,256 176,256 286,50 270,50" fill="#d7261e"/>
+                <polygon points="176,256 192,256 302,50 286,50" fill="#f4f4f4"/>
+                <rect x="14" y="50" width="72" height="206" fill="url(#pole-shade)"/>
+              </g>
+              <!-- lettering -->
+              <g font-family="Bebas Neue, Impact, sans-serif" font-size="30" text-anchor="middle" fill="#0b0b0b" stroke="#f4f4f4" stroke-width="3" paint-order="stroke" stroke-linejoin="round">
+                <text x="50" y="112" font-size="24" textLength="44" lengthAdjust="spacingAndGlyphs">THE</text>
+                <text x="50" y="160" textLength="62" lengthAdjust="spacingAndGlyphs">WRIGHT</text>
+                <text x="50" y="208" textLength="60" lengthAdjust="spacingAndGlyphs">TOUCH</text>
+              </g>
+              <!-- chrome rings and base -->
+              <rect x="10" y="40" width="80" height="12" rx="5" fill="url(#pole-chrome)"/>
+              <rect x="10" y="252" width="80" height="12" rx="5" fill="url(#pole-chrome)"/>
+              <rect x="6" y="264" width="88" height="16" rx="6" fill="url(#pole-chrome)"/>
+            </svg>
           </span>
           <span class="panel-tag">The Barber</span>
           <h2>The Wright Touch</h2>
