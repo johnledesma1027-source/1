@@ -519,3 +519,22 @@ figcaption a { color: var(--yellow); }
 @media (max-width: 859px) {
   .panel--barber p { padding-right: 56px; }
 }
+
+/* Clippers: top-left of the barber panel, tilted like they're just set down */
+.clippers {
+  position: absolute;
+  top: 26px;
+  left: 22px;
+  width: 170px;
+  height: auto;
+  transform: rotate(-14deg);
+  filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.6));
+}
+@media (max-width: 859px) {
+  .clippers { width: 120px; top: 18px; left: 14px; }
+}
+
+/* Scissors sit higher and smaller on phones so they clear the heading */
+@media (max-width: 859px) {
+  .scissors { width: 84px; height: 84px; top: 12px; right: 14px; }
+}
