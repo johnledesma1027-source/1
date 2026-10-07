@@ -495,7 +495,7 @@ figcaption a { color: var(--yellow); }
 
 /* Lawn: still illustrated lawn with sharp mowing lines and a straight walkway */
 .panel--lawn .panel-art {
-  background: url("assets/img/lawn-clean-cut.svg") center 55% / cover no-repeat;
+  background: url("assets/img/lawn-edge-closeup.svg") center / cover no-repeat;
 }
 .panel--lawn .panel-art::after {
   content: "";
