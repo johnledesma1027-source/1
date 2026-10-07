@@ -88,6 +88,14 @@ p { margin: 0 0 1em; }
 }
 .lede { font-size: 1.1rem; color: #d9d2c5; max-width: 40em; margin-bottom: 28px; }
 
+.slogan {
+  font-family: var(--display);
+  font-size: clamp(1.6rem, 4.5vw, 2.6rem);
+  letter-spacing: 0.04em;
+  color: var(--lime);
+  margin: 0 0 18px;
+}
+
 .split {
   display: grid;
   gap: 14px;
