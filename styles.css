@@ -521,3 +521,6 @@ figcaption a { color: var(--yellow); }
 @media (min-width: 640px) {
   .ba--portrait { aspect-ratio: 4 / 5; }
 }
+
+/* Zoomed-out before / after: show the whole photo, not a crop */
+.ba--zoom-out .ba-img { object-fit: contain; }
