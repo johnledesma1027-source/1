@@ -490,10 +490,23 @@ figcaption a { color: var(--yellow); }
   filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.6));
 }
 
-/* Lawn: photo of a sharp, freshly edged lawn. Scaled to fill the panel; the
-   overlay is darker behind the lettering so the text stands out. */
+/* Lawn: photo of a sharp, freshly edged lawn, fitted whole inside the panel.
+   The photo gets its own box at its real 1200:630 ratio, so its top and bottom
+   edges can fade into the panel. The overlay is darker behind the lettering. */
 .panel--lawn .panel-art {
-  background: url("assets/img/lawn-panel-photo.jpg") 62% center / cover no-repeat;
+  container-type: size;
+}
+.panel--lawn .panel-art::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: min(100cqw, calc(100cqh * 1.9048));
+  aspect-ratio: 1200 / 630;
+  transform: translate(-50%, -50%);
+  background: url("assets/img/lawn-panel-photo.jpg") center / cover no-repeat;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 14%, #000 86%, transparent 100%);
+          mask-image: linear-gradient(to bottom, transparent 0%, #000 14%, #000 86%, transparent 100%);
 }
 .panel--lawn .panel-art::after {
   content: "";
