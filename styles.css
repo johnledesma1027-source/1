@@ -621,19 +621,8 @@ figcaption a { color: var(--yellow); }
 }
 .panel--handyman .panel-tag,
 .panel--handyman .panel-cta { color: var(--yellow); }
-.panel-art--handyman { }
-.tools {
-  position: absolute;
-  right: 44px;
-  top: 50%;
-  width: 120px;
-  height: 120px;
-  transform: translateY(-50%);
-  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.6));
-}
 @media (min-width: 860px) {
   .panel--handyman { grid-column: 1 / -1; min-height: 230px; }
 }
 @media (max-width: 859px) {
-  .tools { width: 84px; height: 84px; right: 18px; }
 }
