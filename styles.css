@@ -619,3 +619,60 @@ figcaption a { color: var(--yellow); }
   .fleur, .fleur-glint, .sparkle { animation: none; }
   .sparkle { opacity: 0.6; }
 }
+
+/* ---------- Handyman ---------- */
+.section--handyman {
+  max-width: none;
+  background:
+    radial-gradient(circle at 90% 0%, rgba(201, 162, 39, 0.16), transparent 55%),
+    var(--ink-2);
+}
+.section--handyman > * { max-width: var(--max); margin-left: auto; margin-right: auto; }
+.cards--3 { grid-template-columns: 1fr; }
+.svc-list { list-style: none; margin: 10px 0 0; padding: 0; }
+.svc-list li {
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 6px;
+  color: #cfc8ba;
+}
+.svc-list li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 0.55em;
+  width: 6px;
+  height: 6px;
+  background: var(--yellow);
+  transform: rotate(45deg);
+}
+@media (min-width: 860px) {
+  .cards--3 { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* Handyman hero panel: full width under the barber and lawn panels */
+.panel--handyman {
+  background:
+    linear-gradient(120deg, rgba(201, 162, 39, 0.22), transparent 60%),
+    #0c0c0c;
+  border: 1px solid #6b5418;
+  color: var(--cream);
+}
+.panel--handyman .panel-tag,
+.panel--handyman .panel-cta { color: var(--yellow); }
+.panel-art--handyman { }
+.tools {
+  position: absolute;
+  right: 44px;
+  top: 50%;
+  width: 120px;
+  height: 120px;
+  transform: translateY(-50%);
+  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.6));
+}
+@media (min-width: 860px) {
+  .panel--handyman { grid-column: 1 / -1; min-height: 230px; }
+}
+@media (max-width: 859px) {
+  .tools { width: 84px; height: 84px; right: 18px; }
+}
