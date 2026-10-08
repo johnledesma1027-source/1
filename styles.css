@@ -472,7 +472,7 @@ figcaption a { color: var(--yellow); }
 /* Barber: the barber-pole photo fills the panel edge to edge (cover, so no black
    bands top or bottom). A dark lower overlay keeps the lettering readable. */
 .panel--barber .panel-art {
-  background: url("assets/img/barber-wall.jpg") center / cover no-repeat;
+  background: url("assets/img/barber-wall.jpg") left center / cover no-repeat;
 }
 .panel--barber .panel-art::after {
   content: "";
@@ -485,11 +485,8 @@ figcaption a { color: var(--yellow); }
     rgba(0, 0, 0, 0.15) 100%
   );
 }
-/* Text moves right so the chair figure can sit in the bottom-left corner */
-.panel--barber > *:not(.panel-art) { margin-left: 92px; }
-@media (max-width: 859px) {
-  .panel--barber > *:not(.panel-art) { margin-left: 60px; }
-}
+/* The pole sits in the right quarter of the photo, so the text stops short of it */
+.panel--barber { padding-right: 26%; }
 
 /* Lawn: photo of a sharp, freshly edged lawn, fitted whole inside the panel.
    The photo gets its own box at its real 1200:630 ratio, so its top and bottom
@@ -535,10 +532,10 @@ figcaption a { color: var(--yellow); }
 /* Zoomed-out before / after: show the whole photo, not a crop */
 .ba--zoom-out .ba-img { object-fit: contain; }
 
-/* ---------- Rotating barber-in-the-chair figure (bottom-left of the barber panel) ---------- */
+/* ---------- Rotating barber-in-the-chair figure (bottom-right of the barber panel) ---------- */
 .fleur-wrap {
   position: absolute;
-  left: 16px;
+  right: 16px;
   bottom: 14px;
   z-index: 1;
   width: 66px;
@@ -577,7 +574,7 @@ figcaption a { color: var(--yellow); }
   50% { opacity: 1; transform: scale(1) rotate(45deg); }
 }
 @media (max-width: 859px) {
-  .fleur-wrap { left: 12px; bottom: 10px; width: 54px; height: 72px; }
+  .fleur-wrap { right: 12px; bottom: 10px; width: 54px; height: 72px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .fleur, .sparkle { animation: none; }
