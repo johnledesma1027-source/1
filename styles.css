@@ -488,10 +488,21 @@ figcaption a { color: var(--yellow); }
 /* The pole sits in the right quarter of the photo, so the text stops short of it */
 .panel--barber { padding-right: 26%; }
 
-/* Lawn: photo of a sharp, freshly edged lawn, filling the whole panel edge to
-   edge (cover), so no black shows at the sides. The overlay sits behind the lettering. */
+/* Lawn: looping, sharpened clip of edging a lawn, filling the panel edge to edge
+   (cover), so no black shows at the sides. The overlay sits behind the lettering. */
 .panel--lawn .panel-art {
-  background: url("assets/img/lawn-panel-photo.jpg") center / cover no-repeat;
+  background: #0c0c0c url("assets/img/yard-poster.jpg") center / cover no-repeat;
+}
+/* The looping clip plays muted on the page; the poster frame shows until it starts */
+.yard-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media (prefers-reduced-motion: reduce) {
+  .yard-video { display: none; }
 }
 .panel--lawn .panel-art::after {
   content: "";
@@ -499,12 +510,13 @@ figcaption a { color: var(--yellow); }
   inset: 0;
   background: linear-gradient(
     to top,
-    rgba(0, 0, 0, 0.92) 0%,
-    rgba(0, 0, 0, 0.72) 38%,
-    rgba(0, 0, 0, 0.3) 70%,
-    rgba(0, 0, 0, 0.15) 100%
+    rgba(0, 0, 0, 0.88) 0%,
+    rgba(0, 0, 0, 0.55) 40%,
+    rgba(0, 0, 0, 0.12) 75%,
+    rgba(0, 0, 0, 0.05) 100%
   );
 }
+
 .panel--lawn > *:not(.panel-art) {
   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.9);
 }
