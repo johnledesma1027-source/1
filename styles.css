@@ -490,15 +490,25 @@ figcaption a { color: var(--yellow); }
   filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.6));
 }
 
-/* Lawn: still illustrated lawn with sharp mowing lines and a straight walkway */
+/* Lawn: photo of a sharp, freshly edged lawn. Scaled to fill the panel; the
+   overlay is darker behind the lettering so the text stands out. */
 .panel--lawn .panel-art {
-  background: url("assets/img/lawn-edge-closeup.svg") center / cover no-repeat;
+  background: url("assets/img/lawn-panel-photo.jpg") 62% center / cover no-repeat;
 }
 .panel--lawn .panel-art::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.25) 60%, rgba(0, 0, 0, 0));
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.92) 0%,
+    rgba(0, 0, 0, 0.72) 38%,
+    rgba(0, 0, 0, 0.3) 70%,
+    rgba(0, 0, 0, 0.15) 100%
+  );
+}
+.panel--lawn > *:not(.panel-art) {
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.9);
 }
 
 /* Half-width before / after (locs) */
