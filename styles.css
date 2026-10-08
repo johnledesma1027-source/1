@@ -469,25 +469,26 @@ figcaption a { color: var(--yellow); }
 .panel > *:not(.panel-art) { position: relative; z-index: 1; }
 .panel-art { position: absolute; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
 
-/* Barber: still scissors and barber pole */
-.panel--barber .panel-art { color: var(--orange); }
-.scissors {
-  position: absolute;
-  top: 22px;
-  right: 44px;
-  width: 110px;
-  height: 110px;
-  opacity: 0.9;
+/* Barber: the barber-pole photo fills the panel edge to edge (cover, so no black
+   bands top or bottom). A dark lower overlay keeps the lettering readable. */
+.panel--barber .panel-art {
+  background: url("assets/img/barber-wall.jpg") center / cover no-repeat;
 }
-.blade { transform-box: view-box; transform-origin: 60px 60px; }
-
-.pole {
+.panel--barber .panel-art::after {
+  content: "";
   position: absolute;
-  right: 26px;
-  bottom: 22px;
-  width: 58px;
-  height: 174px;
-  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.6));
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.92) 0%,
+    rgba(0, 0, 0, 0.6) 45%,
+    rgba(0, 0, 0, 0.15) 100%
+  );
+}
+/* Text moves right so the chair figure can sit in the bottom-left corner */
+.panel--barber > *:not(.panel-art) { margin-left: 92px; }
+@media (max-width: 859px) {
+  .panel--barber > *:not(.panel-art) { margin-left: 60px; }
 }
 
 /* Lawn: photo of a sharp, freshly edged lawn, fitted whole inside the panel.
@@ -534,43 +535,12 @@ figcaption a { color: var(--yellow); }
 /* Zoomed-out before / after: show the whole photo, not a crop */
 .ba--zoom-out .ba-img { object-fit: contain; }
 
-/* Smaller pole on phones so it doesn't crowd the panel text */
-@media (max-width: 859px) {
-  .pole { width: 40px; height: 120px; right: 16px; bottom: 16px; }
-}
-
-/* Keep phone-width panel text clear of the barber pole */
-@media (max-width: 859px) {
-  .panel--barber p { padding-right: 56px; }
-}
-
-/* Clippers: reference illustration, left of the shears */
-.clippers {
-  position: absolute;
-  top: 24px;
-  right: 170px;
-  width: 150px;
-  filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.6));
-}
-.clippers img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-@media (max-width: 859px) {
-  .clippers { width: 78px; top: 6px; right: 100px; }
-}
-
-/* Scissors sit higher and smaller on phones so they clear the heading */
-@media (max-width: 859px) {
-  .scissors { width: 84px; height: 84px; top: 12px; right: 14px; }
-}
-
-/* ---------- Live gold fleur-de-lis beside the barber pole ---------- */
+/* ---------- Rotating barber-in-the-chair figure (bottom-left of the barber panel) ---------- */
 .fleur-wrap {
   position: absolute;
-  right: 90px;
-  bottom: 8px;
+  left: 16px;
+  bottom: 14px;
+  z-index: 1;
   width: 66px;
   height: 90px;
   perspective: 260px;
@@ -607,7 +577,7 @@ figcaption a { color: var(--yellow); }
   50% { opacity: 1; transform: scale(1) rotate(45deg); }
 }
 @media (max-width: 859px) {
-  .fleur-wrap { right: 64px; bottom: 10px; width: 40px; height: 54px; }
+  .fleur-wrap { left: 12px; bottom: 10px; width: 54px; height: 72px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .fleur, .sparkle { animation: none; }
