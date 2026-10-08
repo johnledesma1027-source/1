@@ -454,6 +454,7 @@ figcaption a { color: var(--yellow); }
 /* ---------- Inside the work (animated GIF) ---------- */
 .section--video { max-width: var(--max); margin: 0 auto; }
 .video-wrap { margin: 0; }
+.video-wrap img + img { margin-top: 16px; }
 .video-wrap img {
   display: block;
   width: 100%;
