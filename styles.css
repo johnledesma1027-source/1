@@ -621,8 +621,31 @@ figcaption a { color: var(--yellow); }
 }
 .panel--handyman .panel-tag,
 .panel--handyman .panel-cta { color: var(--yellow); }
-@media (min-width: 860px) {
-  .panel--handyman { grid-column: 1 / -1; min-height: 230px; }
+
+/* Handyman tools photo, shown whole so the tools stay visible. Phones: a band along
+   the bottom with the text above it. Desktop: on the right, fading in from its left
+   edge. The fade is on the photo itself, so it can't leave a hard edge. */
+.panel--handyman .handy-photo {
+  position: absolute;
+  display: block;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 45%);
+          mask-image: linear-gradient(to bottom, transparent 0%, #000 45%);
 }
-@media (max-width: 859px) {
+.panel--handyman { justify-content: flex-start; padding-bottom: 196px; }
+
+@media (min-width: 860px) {
+  .panel--handyman { grid-column: 1 / -1; min-height: 300px; justify-content: flex-end; padding-bottom: 36px; }
+  .panel--handyman .handy-photo {
+    top: 0;
+    left: auto;
+    right: 0;
+    width: auto;
+    height: 100%;
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 35%);
+            mask-image: linear-gradient(to right, transparent 0%, #000 35%);
+  }
 }
