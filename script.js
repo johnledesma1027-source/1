@@ -3,8 +3,8 @@
 // site is generated from this block.
 // ---------------------------------------------------------------
 const CONTACT = {
-  phone: "+10000000000",              // digits with country code, e.g. +13035551234
-  phoneDisplay: "(000) 000-0000",     // how the number reads on the page
+  phone: "+15045159858",              // digits with country code, e.g. +13035551234
+  phoneDisplay: "(504) 515-9858",     // how the number reads on the page
   email: "your-email@example.com",
   instagram: "https://instagram.com/the_wright_touch44",
 };
