@@ -59,6 +59,7 @@ p { margin: 0 0 1em; }
 }
 .eyebrow::before { content: "\269C\00a0"; color: var(--gold); letter-spacing: 0; }
 .muted { color: var(--muted); }
+.eyebrow .dot { color: var(--orange); }
 .accent { color: var(--orange); }
 
 /* ---------- Nav ---------- */
