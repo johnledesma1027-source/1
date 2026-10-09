@@ -31,6 +31,9 @@
 
 html { scroll-behavior: smooth; scroll-padding-top: 76px; }
 
+/* Sections slide in from the sides; clip so they never widen the page */
+main { overflow-x: clip; }
+
 body {
   margin: 0;
   background: var(--ink);
