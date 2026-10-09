@@ -96,6 +96,14 @@ p { margin: 0 0 1em; }
 }
 .lede { font-size: 1.1rem; color: #d9d2c5; max-width: 40em; margin-bottom: 28px; }
 
+/* Small lawnmower and barber pole, sized to the cap height of the slogan letters */
+.slogan-icon {
+  display: inline-block;
+  height: 0.7em;
+  width: auto;
+  margin: 0 0.12em;
+  vertical-align: baseline;
+}
 .slogan {
   font-family: var(--display);
   font-size: clamp(1.6rem, 4.5vw, 2.6rem);
