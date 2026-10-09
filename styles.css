@@ -667,3 +667,6 @@ figcaption a { color: var(--yellow); }
             mask-image: linear-gradient(to right, transparent 0%, #000 35%);
   }
 }
+
+/* Lawn before / after: a 4:3 frame that suits both photos */
+.ba.ba--lawn { aspect-ratio: 4 / 3; max-height: none; }
