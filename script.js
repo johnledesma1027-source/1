@@ -5,7 +5,7 @@
 const CONTACT = {
   phone: "+15045159858",              // digits with country code, e.g. +13035551234
   phoneDisplay: "(504) 515-9858",     // how the number reads on the page
-  email: "your-email@example.com",
+  email: "the.wright.touch.services@gmail.com",
   instagram: "https://instagram.com/the_wright_touch44",
 };
 // ---------------------------------------------------------------
